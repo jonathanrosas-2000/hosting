@@ -4,13 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Web | jonathanrosas2000@hotmail.com </title>
+    <title>Portafolio Web | Mensaje Enviado |jonathanrosas2000@hotmail.com </title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="icon/jpg" href="https://i.pinimg.com/736x/1f/5c/79/1f5c79832b4d0fddf889e3fc956a992c.jpg">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
+<?php
+    $myemail = 'jonathanrosas2000@hotmail.com';
+    $name = $_POST['user_name'];
+    $email = $_POST['user_mail'];
+    $message = $_POST¨['user_message'];
+
+    $to = $myemail;
+    $email_subject = "Nuevo mensaje:  $subject";
+    $emial_body = "Haz recibido un nuevo mensaje. \n Nombre: $nombre \n Correo: $email \n Mensaje: $message";
+    $headers = "From: $email";
+
+    mail($to, $email_subject, $emial_body, $headers);
+    echo "El mensaje se ha enviado correctamente"
+
+    ?>
     <header>
         <a href="" class="logo">mi Portafolio</a>
         <div class="toggle" onclick="toggleMenu();">
