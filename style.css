@@ -319,6 +319,8 @@ img{
     position: relative;
     padding: 20px 0;
     display: flex;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 .contactInfoBox .box .icon{
     min-width: 40px;
@@ -422,5 +424,8 @@ img{
         margin-top: 10px;
         padding: 10px 20px;
         font-size: 16px;
+    }
+    .contactInfoBx{
+        display: block !important;
     }
 }
