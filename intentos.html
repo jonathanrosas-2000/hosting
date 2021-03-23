@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Cambiar texto</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <style type="text/css">
+      /*<![CDATA[*/
+
+      .rojo {
+        color: red;
+      }
+
+      /*]]>*/
+    </style>
+    <script type="text/javascript">
+      //<![CDATA[
+      var Textos = new Array();
+      // Enter the names of the images below
+      Textos[0] = "texto1";
+      Textos[1] = "<h1>texto2<\/h1>";
+      Textos[2] = "<p class='rojo'>texto3<\/p>";
+
+      var nuevoTexto = -1; // para empezar en el primer texto -1, con 0 comienza por mostrar el segundo
+      var totalTextos = Textos.length;
+
+      function repetir() {
+        nuevoTexto++;
+        if (nuevoTexto == totalTextos) {
+          nuevoTexto = 0;
+        }
+        document.getElementById("texto").innerHTML = Textos[nuevoTexto];
+        // cambiar 4 por el valor en segundos
+        setTimeout("repetir()", 4 * 1000);
+      }
+      window.onload = repetir;
+      //]]>
+    </script>
+  </head>
+  <body>
+    <div id="texto"><!-- texto --></div>
+  </body>
+</html>
